@@ -14,3 +14,25 @@ const fourthRow = [
     [122, 120, 99, 118, 98, 110, 109, 44, 46, 47],
     [90, 88, 67, 86, 66, 78, 77, 60, 62, 63]
 ];
+
+(function getTextarea() {
+    const body = document.querySelector('body');
+    const textarea = document.createElement('textarea');
+    body.classList.add('container');
+    textarea.classList.add('textarea');
+    body.appendChild(textarea);
+})();
+
+(function generateKeyboard() {
+    const keyCodeName = [
+        ["Backquote", "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6", "Digit7", "Digit8", "Digit9", "Digit0", "Minus", "Equal", "Backspace"],
+        ["Tab", "KeyQ", "KeyW", "KeyE", "KeyR", "KeyT", "KeyY", "KeyU", "KeyI", "KeyO", "KeyP", "BracketLeft", "BracketRight", "Backslash", "Delete"],
+        ["CapsLock", "KeyA", "KeyS", "KeyD", "KeyF", "KeyG", "KeyH", "KeyJ", "KeyK", "KeyL", "Semicolon", "Quote", "Enter"],
+        ["ShiftLeft", "KeyZ", "KeyX", "KeyC", "KeyV", "KeyB", "KeyN", "KeyM", "Comma", "Period", "Slash", "ArrowUp", "ShiftRight"],
+        ["ControlLeft", "MetaLeft", "AltLeft", "Space", "AltRight", "ArrowLeft", "ArrowDown", "ArrowRight", "ControlRight"]
+    ];
+    const sysKeys = ['Backspace', 'Tab', 'Del', 'CapsLock', 'Enter', 'Shift', '&#x25B2;', 'Shift', 'Ctrl', 'Win', 'Alt', 'Alt', '&#x25C4;', '&#x25BC;', '&#x25BA;', 'Ctrl'];
+    const keyboard = document.createElement('div');
+    const body = document.querySelector('body');
+    keyboard.classList.add('keyboard');
+    body.appendChild(keyboard);
